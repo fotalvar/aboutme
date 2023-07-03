@@ -1,17 +1,19 @@
 import { styled } from "styled-components";
 
 const NavStyled = styled.nav`
-  top: 80px;
-  position: absolute;
   display: flex;
   width: 100vw;
   justify-content: center;
+  align-self: center;
+  flex-wrap: wrap;
+  height: 120px;
+  align-content: center;
 
   .nav {
     &__developer,
     &__designer {
-      width: 400px;
-      height: 75px;
+      width: 350px;
+      height: 65px;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
