@@ -1,16 +1,43 @@
-import React from "react";
-import Nav from "../components/Nav/Nav";
+import React, { useEffect, useState } from "react";
+import Nav from "../../components/Nav/Nav";
 import LandingPageStyled from "./LandingPageStyled";
 
 const LandingPage = (): React.ReactElement => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 875);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
-      <LandingPageStyled className="page">
+      <LandingPageStyled className="page__landing" id="intro">
         <Nav />
+        <img src="/images/background.webp" className="intro__background" />
         <section className="intro">
-          <span className="intro__greeting">Hi!</span>
-          <h1 className="intro__title">I'm Fede</h1>
-          <h2 className="intro__subtitle">and here's what I do</h2>
+          {isMobile ? (
+            <>
+              <span className="intro__greeting">Hi!</span>
+              <h1 className="intro__title">I'm Fede</h1>
+              <h2 className="intro__subtitle__mobile">a fullstack</h2>
+              <h2 className="intro__subtitle__mobile">
+                <strong>developer</strong> and
+              </h2>
+              <h2 className="intro__subtitle__mobile__light">UX Designer</h2>
+            </>
+          ) : (
+            <>
+              <span className="intro__greeting">Hi!</span>
+              <h1 className="intro__title">I'm Fede</h1>
+            </>
+          )}
         </section>
         <section className="designer">
           <article className="designer__container">
@@ -40,7 +67,7 @@ const LandingPage = (): React.ReactElement => {
           </article>
           <img className="picture picture__right" src="/images/right.png"></img>
         </section>
-        <div className="separator"></div>
+        <div className="intro__separator"></div>
       </LandingPageStyled>
     </>
   );

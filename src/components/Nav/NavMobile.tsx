@@ -1,34 +1,48 @@
+import { useState } from "react";
+
 const NavMobile = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleItemClick = () => {
+    setIsChecked(false);
+  };
+
   return (
     <>
       <div className="nav__mobile">
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            checked={isChecked}
+            onChange={() => setIsChecked(!isChecked)}
+          />
           <span className="menu">
-            {" "}
-            <span className="hamburger"></span>{" "}
+            <span className="hamburger"></span>
           </span>
           <ul>
             <li>
-              {" "}
-              <a href="#">About me</a>{" "}
+              <a className="nav__item" href="#intro" onClick={handleItemClick}>
+                Home
+              </a>
             </li>
             <li>
-              {" "}
-              <a href="#about">UX Designer</a>{" "}
+              <a className="nav__item" href="#about" onClick={handleItemClick}>
+                About Me
+              </a>
             </li>
             <li>
-              {" "}
-              <a href="#">Developer</a>{" "}
+              <a className="nav__item" href="#" onClick={handleItemClick}>
+                Portfolio
+              </a>
             </li>
             <li>
-              {" "}
-              <a href="#">Say Hi !</a>{" "}
+              <a className="nav__item" href="#" onClick={handleItemClick}>
+                Say Hi !
+              </a>{" "}
             </li>
           </ul>
         </label>
       </div>
-      ;
     </>
   );
 };
