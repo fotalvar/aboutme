@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
 ::before,
 ::after {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body,
@@ -27,6 +28,7 @@ a {
 
 body {
   background-color: ${(props) => props.theme.colors.background};
+  min-width: ${(props) => props.theme.breakpoints.xs};
 }
 
 img {
