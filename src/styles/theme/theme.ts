@@ -14,6 +14,14 @@ export const theme: DefaultTheme = {
     title: "'Patua One', cursive",
     titleStyled: "'Lily Script One', cursive",
   },
+
+  breakpoints: {
+    xs: "360px",
+    sm: "640px",
+    md: "875px",
+    lg: "1024px",
+    xl: "1280px",
+  },
 };
 
 export default theme;

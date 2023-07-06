@@ -15,6 +15,14 @@ declare module "styled-components" {
       title: string;
       titleStyled: string;
     };
+
+    breakpoints: {
+      xs: string;
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+    };
   }
 }
 export default DefaultTheme;
