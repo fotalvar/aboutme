@@ -8,6 +8,10 @@ const GlobalStyle = createGlobalStyle`
   scroll-behavior: smooth;
 }
 
+html{
+    min-width: ${(props) => props.theme.breakpoints.xs};
+}
+
 body,
 h1,
 h2,
@@ -28,7 +32,6 @@ a {
 
 body {
   background-color: ${(props) => props.theme.colors.background};
-  min-width: ${(props) => props.theme.breakpoints.xs};
 }
 
 img {
