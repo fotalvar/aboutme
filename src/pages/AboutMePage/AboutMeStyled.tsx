@@ -8,7 +8,7 @@ const AboutMePageStyled = styled.section`
   background-image: url(/images/about_background.webp);
   background-position: center;
   background-size: cover;
-  padding-top: 100px;
+  padding-top: 10vh;
   gap: 30px;
   justify-content: space-between;
 
@@ -58,12 +58,26 @@ const AboutMePageStyled = styled.section`
         font-style: normal;
         font-weight: 400;
         line-height: 30px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
       }
 
       &__buttons {
         display: flex;
         padding: 20px 0;
         gap: 20px;
+
+        @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+          flex-direction: column;
+          align-items: center;
+        }
       }
 
       &__button {
@@ -74,13 +88,20 @@ const AboutMePageStyled = styled.section`
         padding: 10px 20px;
         flex-shrink: 0;
         font-size: 18px;
-        color: ${(props) => props.theme.colors.darkPink};
+        color: ${(props) => props.theme.colors.lightPink};
         font-family: ${(props) => props.theme.fonts.title};
-        border: none;
+        border: 1px solid ${(props) => props.theme.colors.lightPink};
 
         &:hover {
-          background: ${(props) => props.theme.colors.darkPink};
+          background: ${(props) => props.theme.colors.lightPink};
           color: #efefef;
+          border: 1px solid ${(props) => props.theme.colors.lightPink};
+        }
+
+        &:focus-visible {
+          background: blue;
+          color: #efefef;
+          border: 1px solid ${(props) => props.theme.colors.lightPink};
         }
       }
 
@@ -103,7 +124,7 @@ const AboutMePageStyled = styled.section`
       display: flex;
       flex-direction: column;
       gap: 15px;
-      font-size: 2rem;
+      font-size: 1.5rem;
       justify-content: center;
       align-items: flex-end;
 

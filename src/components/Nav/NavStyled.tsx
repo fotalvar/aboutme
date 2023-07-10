@@ -79,8 +79,7 @@ const NavStyled = styled.nav`
 
   label input:checked + .menu {
     border-radius: 0 0 30px 30px;
-    backdrop-filter: blur(12.5px);
-    background: rgba(65, 215, 217, 0.85);
+    background: rgba(65, 215, 217);
     width: 450px;
     height: 350px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,

@@ -19,16 +19,21 @@ const LandingPageStyled = styled.main`
   .nav {
     grid-area: nav;
     z-index: 3;
+    animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
   }
 
   .designer {
     grid-area: designer;
     z-index: 1;
+    animation: swing-in-left-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s
+      both;
   }
 
   .developer {
     grid-area: developer;
     z-index: 1;
+    animation: swing-in-right-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+      0.5s both;
   }
 
   .intro {
@@ -40,6 +45,7 @@ const LandingPageStyled = styled.main`
     flex-direction: column;
     justify-content: center;
     z-index: 1;
+    animation: flip-in-hor-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
     &__background {
       z-index: 0;
@@ -100,7 +106,7 @@ const LandingPageStyled = styled.main`
       height: 100vh;
       object-fit: cover;
       z-index: 0;
-      opacity: 60%;
+      opacity: 30%;
     }
   }
 
@@ -207,6 +213,54 @@ const LandingPageStyled = styled.main`
 
     @media (max-width: ${(props) => props.theme.breakpoints.md}) {
       width: 30vw;
+    }
+  }
+
+  @keyframes swing-in-left-fwd {
+    0% {
+      transform: rotateY(100deg);
+      transform-origin: left;
+      opacity: 0;
+    }
+    100% {
+      transform: rotateY(0);
+      transform-origin: left;
+      opacity: 1;
+    }
+  }
+
+  @keyframes swing-in-right-fwd {
+    0% {
+      transform: rotateY(-100deg);
+      transform-origin: right;
+      opacity: 0;
+    }
+    100% {
+      transform: rotateY(0);
+      transform-origin: right;
+      opacity: 1;
+    }
+  }
+
+  @keyframes flip-in-hor-top {
+    0% {
+      transform: rotateX(-80deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 `;
