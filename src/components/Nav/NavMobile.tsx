@@ -35,7 +35,7 @@ const NavMobile = () => {
             </a>
           </li>
           <li>
-            <a className="nav__item" href="#" onClick={handleItemClick}>
+            <a className="nav__item" href="#hi" onClick={handleItemClick}>
               Say Hi !
             </a>
           </li>

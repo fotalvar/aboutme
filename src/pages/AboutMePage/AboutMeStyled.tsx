@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 const AboutMePageStyled = styled.section`
-  position: absolute;
+  position: relative;
   display: flex;
   background: #fff;
   min-height: 100vh;
@@ -11,6 +11,7 @@ const AboutMePageStyled = styled.section`
   padding-top: 10vh;
   gap: 30px;
   justify-content: space-between;
+  border-bottom: 20px solid ${(props) => props.theme.colors.lightPink};
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     flex-direction: column-reverse;
@@ -142,15 +143,6 @@ const AboutMePageStyled = styled.section`
     &__check {
       width: 48px;
       height: 48px;
-    }
-
-    &__separator {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100vw;
-      height: 20px;
-      background-color: ${(props) => props.theme.colors.lightPink};
     }
   }
 `;
