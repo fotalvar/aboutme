@@ -6,6 +6,7 @@ const LandingPageStyled = styled.main`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.5fr 1.5fr 1fr 1fr;
   gap: 0px 0px;
+  border-bottom: 20px solid ${(props) => props.theme.colors.aqua};
   grid-template-areas:
     "nav nav"
     "intro intro"
@@ -88,15 +89,6 @@ const LandingPageStyled = styled.main`
           color: ${(props) => props.theme.colors.lightPink};
         }
       }
-    }
-
-    &__separator {
-      position: absolute;
-      bottom: 0;
-      width: 100vw;
-      height: 20px;
-      background-color: ${(props) => props.theme.colors.aqua};
-      z-index: 2;
     }
 
     &__background {

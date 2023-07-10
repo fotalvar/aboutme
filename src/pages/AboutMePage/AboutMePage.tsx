@@ -31,7 +31,7 @@ const AboutMePage = (): React.ReactElement => {
             onClick={handleMoreButtonClick}
             defaultChecked
           >
-            I want to know everithing!
+            I want to know everything!
           </button>
         </div>
         {showLessText ? (
@@ -108,7 +108,6 @@ const AboutMePage = (): React.ReactElement => {
           </li>
         </ul>
       </section>
-      <div className="about__separator"></div>
     </AboutMePageStyled>
   );
 };
