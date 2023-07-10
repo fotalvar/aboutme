@@ -24,8 +24,7 @@ const LandingPage = (): React.ReactElement => {
         <section className="intro">
           {isMobile ? (
             <>
-              <span className="intro__greeting">Hi!</span>
-              <h1 className="intro__title">I'm Fede</h1>
+              <img src="/images/greeting.svg" />
               <h2 className="intro__subtitle__mobile">a fullstack</h2>
               <h2 className="intro__subtitle__mobile">
                 <strong>developer</strong> and
@@ -34,8 +33,7 @@ const LandingPage = (): React.ReactElement => {
             </>
           ) : (
             <>
-              <span className="intro__greeting">Hi!</span>
-              <h1 className="intro__title">I'm Fede</h1>
+              <img src="/images/greeting.svg" />
             </>
           )}
         </section>
@@ -51,7 +49,7 @@ const LandingPage = (): React.ReactElement => {
               <li>...</li>
             </ul>
           </article>
-          <img className="picture picture__left" src="/images/left.png"></img>
+          <img className="picture picture__left" src="/images/left.webp"></img>
         </section>
         <section className="developer">
           <article className="developer__container">
@@ -65,7 +63,10 @@ const LandingPage = (): React.ReactElement => {
               <li>...</li>
             </ul>
           </article>
-          <img className="picture picture__right" src="/images/right.png"></img>
+          <img
+            className="picture picture__right"
+            src="/images/right.webp"
+          ></img>
         </section>
         <div className="intro__separator"></div>
       </LandingPageStyled>
