@@ -2,16 +2,19 @@ import { styled } from "styled-components";
 
 const AboutMePageStyled = styled.section`
   position: relative;
+  top: 0%;
   display: flex;
   background: #fff;
-  min-height: 100vh;
   background-image: url(/images/about_background.webp);
   background-position: center;
+  flex-direction: column-reverse;
   background-size: cover;
-  padding-top: 10vh;
-  gap: 30px;
-  justify-content: space-between;
+  min-height: 100vh;
+  padding: 30px;
+  padding-top: 100px;
+  gap: 50px;
   border-bottom: 20px solid ${(props) => props.theme.colors.lightPink};
+  justify-content: flex-end;
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     flex-direction: column-reverse;
@@ -23,13 +26,18 @@ const AboutMePageStyled = styled.section`
       display: flex;
       gap: 40px;
       padding: 0 30px;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+        justify-content: center;
+      }
     }
 
     &__title {
       display: flex;
       color: #41d7d9;
-      text-align: right;
+      text-align: left;
       font-size: 130px;
       font-family: ${(props) => props.theme.fonts.primary};
       font-style: normal;
@@ -42,14 +50,16 @@ const AboutMePageStyled = styled.section`
 
       @media (max-width: ${(props) => props.theme.breakpoints.md}) {
         font-size: 80px;
-        line-height: 60px;
+        line-height: 70px;
+        text-align: center;
       }
     }
 
     &__time {
       display: flex;
       flex-direction: column;
-      padding: 0 30px;
+      padding: 10px;
+      transition: 0.5s linear;
 
       &__title {
         color: ${(props) => props.theme.colors.lightPink};
@@ -115,8 +125,7 @@ const AboutMePageStyled = styled.section`
         font-style: normal;
         font-weight: 400;
         line-height: 50px;
-        max-width: 900px;
-        transition: 0.5s linear;
+        max-width: 100%;
         padding: 30px 0;
       }
     }

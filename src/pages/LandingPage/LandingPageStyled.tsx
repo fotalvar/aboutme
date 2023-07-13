@@ -57,11 +57,11 @@ const LandingPageStyled = styled.main`
     }
 
     &__greeting {
-      color: ${(props) => props.theme.colors.darkPink};
-      font-size: 60px;
-      font-family: ${(props) => props.theme.fonts.titleStyled};
-      font-weight: 400;
-      margin-bottom: -20px;
+      max-width: 400px;
+      @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+        max-width: 300px;
+        padding-bottom: 50px;
+      }
     }
 
     &__title {
@@ -204,7 +204,7 @@ const LandingPageStyled = styled.main`
     }
 
     @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-      width: 30vw;
+      width: 35vw;
     }
   }
 

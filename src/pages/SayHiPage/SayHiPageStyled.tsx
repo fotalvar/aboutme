@@ -6,8 +6,6 @@ const SayHiPagedStyled = styled.section`
   flex-direction: column;
   background: #fff;
   min-height: 100vh;
-  background-position: center;
-  background-size: cover;
   align-items: center;
   justify-content: center;
   padding-bottom: 100px;
@@ -42,12 +40,17 @@ const SayHiPagedStyled = styled.section`
       display: flex;
       gap: 20px;
       padding: 30px;
+
+      @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     }
 
     &__button {
       display: inline-flex;
       min-width: 100px;
-      padding: 15px 30px;
+      padding: 15px 20px;
       justify-content: center;
       align-items: center;
       gap: 10px;
@@ -56,6 +59,11 @@ const SayHiPagedStyled = styled.section`
       background: ${(props) => props.theme.colors.lightPink};
       color: #fff;
       text-transform: uppercase;
+
+      &:hover {
+        background-color: ${(props) => props.theme.colors.darkPink};
+        transition: 0.2s ease-in-out;
+      }
     }
 
     &__about {
@@ -67,6 +75,7 @@ const SayHiPagedStyled = styled.section`
       background-color: #f3f3f3;
       border-radius: 10px 10px 0 0;
       box-shadow: rgb(0 0 0 / 26%) 0px -25px 20px -20px;
+      border: 1px solid ${(props) => props.theme.colors.darkPink};
 
       &__title {
         padding-top: 30px;
