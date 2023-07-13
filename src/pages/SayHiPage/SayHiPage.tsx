@@ -20,6 +20,14 @@ const SayHiPage = (): React.ReactElement => {
           <img src="/images/icons/linkedin.svg" alt="linkedin icon" />
           LinkedIn
         </a>
+        <a
+          className="hi__button"
+          href="/documents/Fede Otalvares - CV - English.pdf"
+          target="_blank"
+        >
+          <img src="/images/icons/cv.svg" alt="linkedin icon" />
+          Curriculum
+        </a>
       </div>
       <section className="hi__about">
         <h4 className="hi__about__title"> About this WebSite</h4>

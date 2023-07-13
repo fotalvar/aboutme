@@ -20,31 +20,37 @@ const LandingPage = (): React.ReactElement => {
     <>
       <LandingPageStyled className="page__landing" id="intro">
         <Nav />
-        <img src="/images/background.webp" className="intro__background" />
+        <video
+          src="/images/background.webm"
+          className="intro__background"
+          autoPlay
+          muted
+          loop
+        />
         <section className="intro">
           {isMobile ? (
             <>
-              <img src="/images/greeting.svg" />
+              <img src="/images/greeting.svg" className="intro__greeting" />
               <h2 className="intro__subtitle__mobile">a fullstack</h2>
               <h2 className="intro__subtitle__mobile">
-                <strong>developer</strong> and
+                <strong>Developer</strong> and
               </h2>
               <h2 className="intro__subtitle__mobile__light">UX Designer</h2>
             </>
           ) : (
             <>
-              <img src="/images/greeting.svg" />
+              <img src="/images/greeting.svg" className="intro__greeting" />
             </>
           )}
         </section>
         <section className="designer">
           <article className="designer__container">
-            <h3 className="designer__title">UX Designer</h3>
+            <img src="/images/ux.svg" width={300} />
             <ul className="designer__list">
               <li>Figma</li>
+              <li>Certified by Google</li>
               <li>Sketch</li>
               <li>Adobe XD</li>
-              <li>Certified by Google</li>
               <li>Accesibility</li>
               <li>...</li>
             </ul>
@@ -57,9 +63,9 @@ const LandingPage = (): React.ReactElement => {
             <ul className="developer__list">
               <li>Typescript</li>
               <li>React</li>
+              <li>Styled Components</li>
               <li>Express</li>
               <li>MongoDB</li>
-              <li>Styled Components</li>
               <li>...</li>
             </ul>
           </article>
