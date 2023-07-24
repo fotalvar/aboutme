@@ -148,9 +148,10 @@ const LandingPageStyled = styled.main`
       border-radius: 50px;
       background: #fff;
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-      color: ${(props) => props.theme.colors.lightPink};
+      color: #d088a6;
+      border: 1px solid #eedee8;
       padding: 10px;
-      border: 1px solid ${(props) => props.theme.colors.lightPink};
+      font-size: 14px;
     }
   }
 
@@ -184,9 +185,10 @@ const LandingPageStyled = styled.main`
       border-radius: 50px;
       background: #fff;
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-      color: ${(props) => props.theme.colors.darkPink};
       padding: 10px;
-      border: 1px solid ${(props) => props.theme.colors.darkPink};
+      color: #aea6aa;
+      border: 1px solid #e9e9e9;
+      font-size: 14px;
     }
   }
 
@@ -204,7 +206,7 @@ const LandingPageStyled = styled.main`
     }
 
     @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-      width: 35vw;
+      width: 30vw;
     }
   }
 
