@@ -30,7 +30,11 @@ const NavMobile = () => {
             </a>
           </li>
           <li>
-            <a className="nav__item" href="#" onClick={handleItemClick}>
+            <a
+              className="nav__item"
+              href="#portfolio"
+              onClick={handleItemClick}
+            >
               Portfolio
             </a>
           </li>

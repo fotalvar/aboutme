@@ -4,13 +4,17 @@ const AboutMePageStyled = styled.section`
   position: relative;
   top: 0%;
   display: flex;
-  background: #fff;
-  background-image: url(/images/about_background.webp);
-  background-position: center;
+  background: radial-gradient(circle, #fafafa 10%, transparent 11%),
+    radial-gradient(circle at bottom left, #fafafa 5%, transparent 6%),
+    radial-gradient(circle at bottom right, #fafafa 5%, transparent 6%),
+    radial-gradient(circle at top left, #fafafa 5%, transparent 6%),
+    radial-gradient(circle at top right, #fafafa 5%, transparent 6%);
+  background-size: 3em 3em;
+  background-color: #ffffff;
+  opacity: 1;
   flex-direction: column-reverse;
-  background-size: cover;
   min-height: 100vh;
-  padding: 30px;
+  padding: 40px;
   padding-top: 100px;
   gap: 50px;
   border-bottom: 20px solid ${(props) => props.theme.colors.lightPink};
@@ -25,7 +29,6 @@ const AboutMePageStyled = styled.section`
     &__info {
       display: flex;
       gap: 40px;
-      padding: 0 30px;
       flex-direction: row;
       justify-content: space-between;
 
