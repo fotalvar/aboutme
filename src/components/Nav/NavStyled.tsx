@@ -6,7 +6,6 @@ const NavStyled = styled.nav`
   justify-content: center;
   align-self: center;
   flex-wrap: wrap;
-  height: 120px;
   align-content: center;
   border-top: 5px solid ${(props) => props.theme.colors.aqua};
   position: fixed;

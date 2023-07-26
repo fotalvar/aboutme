@@ -35,7 +35,7 @@ const NavMobile = () => {
               href="#portfolio"
               onClick={handleItemClick}
             >
-              Portfolio
+              My Work
             </a>
           </li>
           <li>
