@@ -26,15 +26,15 @@ const LandingPageStyled = styled.main`
   .designer {
     grid-area: designer;
     z-index: 1;
-    animation: swing-in-left-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s
+    animation: swing-in-left-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s
       both;
   }
 
   .developer {
     grid-area: developer;
     z-index: 1;
-    animation: swing-in-right-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-      0.5s both;
+    animation: swing-in-right-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s
+      both;
   }
 
   .intro {
