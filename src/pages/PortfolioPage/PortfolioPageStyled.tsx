@@ -9,7 +9,7 @@ const PortfolioPageStyled = styled.section`
   align-items: center;
   justify-content: center;
   border-bottom: 20px solid ${(props) => props.theme.colors.darkPink};
-  padding: 100px 30px 0px 30px;
+  padding: 100px 40px 0px 40px;
 
   background: #f9f9f9;
   background-image: url(/images/portfolio/portfolio_background.webp);
@@ -36,8 +36,8 @@ const PortfolioPageStyled = styled.section`
     &__image {
       width: 60%;
       min-width: 300px;
-      background-size: cover;
-      object-fit: scale-down;
+      max-height: 100%;
+      object-fit: cover;
       border-right: 10px solid ${(props) => props.theme.colors.lightPink};
 
       @media (max-width: ${(props) => props.theme.breakpoints.md}) {
@@ -51,6 +51,7 @@ const PortfolioPageStyled = styled.section`
       max-width: 40%;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       gap: 20px;
       padding: 30px;
 
@@ -70,7 +71,6 @@ const PortfolioPageStyled = styled.section`
 
     &__item {
       display: flex;
-      align-items: center;
       justify-content: center;
       overflow: hidden;
       border-radius: 20px;
@@ -89,8 +89,35 @@ const PortfolioPageStyled = styled.section`
       }
 
       &__tags {
-        color: #2b2b2b;
+        color: #9098a2;
         font-size: 12px;
+        font-style: italic;
+      }
+    }
+
+    &__tags {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      &__title {
+        width: 100%;
+        margin-top: 20px;
+        text-align: left;
+      }
+
+      &__button {
+        padding: 10px 20px;
+        border-radius: 20px;
+        background-color: ${(props) => props.theme.colors.lightPink};
+        color: #fff;
+        font-size: 14px;
+
+        &:hover {
+          transition: 1s;
+          background-color: ${(props) => props.theme.colors.darkPink};
+        }
       }
     }
 
@@ -102,8 +129,21 @@ const PortfolioPageStyled = styled.section`
       justify-content: center;
       padding: 20px 0;
 
+      &__title {
+        padding: 0 30px;
+        text-transform: uppercase;
+      }
+
       &__image {
-        max-width: 70%;
+        max-width: 30%;
+        @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+          max-width: 80%;
+        }
+      }
+
+      @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+        flex-direction: column;
+        gap: 20px;
       }
     }
   }
