@@ -3,9 +3,12 @@ import SayHiPagedStyled from "./SayHiPageStyled";
 const SayHiPage = (): React.ReactElement => {
   return (
     <SayHiPagedStyled className="hi" id="hi">
-      <h3 className="hi__title">
-        👋 Say <strong>Hi</strong>
-      </h3>
+      <section className="hi__title__container">
+        <h3 className="hi__title hi__title__hand">👋 </h3>
+        <h3 className="hi__title">
+          Say <strong>Hi</strong>
+        </h3>
+      </section>
       <h4 className="hi__subtitle">contact with me anytime</h4>
       <div className="hi__buttons">
         <a className="hi__button" href="mailto:fnotalvares@gmail.com">
@@ -30,9 +33,8 @@ const SayHiPage = (): React.ReactElement => {
         </a>
       </div>
       <section className="hi__about">
-        <h4 className="hi__about__title"> About this WebSite</h4>
         <h5 className="hi__about__subtitle">
-          check out my <strong>code</strong> & <strong>design</strong>
+          Check out my <strong>code</strong> & <strong>design</strong>
         </h5>
         <div className="hi__buttons">
           <a
