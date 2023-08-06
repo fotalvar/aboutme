@@ -61,6 +61,7 @@ const LandingPage = (): React.ReactElement => {
           <article className="developer__container">
             <h3 className="developer__title">{"<coder/>"}</h3>
             <ul className="developer__list">
+              <li>Javascript</li>
               <li>Typescript</li>
               <li>React</li>
               <li>Styled Components</li>

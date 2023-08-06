@@ -26,19 +26,19 @@ const PortfolioPage = (): React.ReactElement => {
             <h3 className="portfolio__tags__title">Take a look</h3>
             <section className="portfolio__tags">
               <a
-                href="http://www.google.es"
+                href="https://github.com/fotalvar/Final-Project-front-202304-bcn"
                 className="portfolio__tags__button"
               >
                 Front Code
               </a>
               <a
-                href="http://www.google.es"
+                href="https://github.com/fotalvar/Final-Project-back-202304-bcn"
                 className="portfolio__tags__button"
               >
                 Back Code
               </a>
               <a
-                href="http://www.google.es"
+                href="https://www.figma.com/file/EVsdnd09yNn24sgfsUJZoV/Fede-Ot%C3%A1lvares-Final-Project-202304-bcn?type=design&node-id=0%3A1&mode=design&t=5q8trJFziKQRQMDs-1"
                 className="portfolio__tags__button"
               >
                 Design
@@ -64,13 +64,13 @@ const PortfolioPage = (): React.ReactElement => {
             <h3 className="portfolio__tags__title">Take a look</h3>
             <section className="portfolio__tags">
               <a
-                href="http://www.google.es"
+                href="https://github.com/fotalvar/aboutme"
                 className="portfolio__tags__button"
               >
                 Front Code
               </a>
               <a
-                href="http://www.google.es"
+                href="https://www.figma.com/file/svQ6d3iwtaYJdv0XQIrvxM/My-Site?type=design&node-id=0%3A1&mode=design&t=GDsaRtk4d6rIfMXj-1"
                 className="portfolio__tags__button"
               >
                 Design
@@ -98,7 +98,7 @@ const PortfolioPage = (): React.ReactElement => {
             <h3 className="portfolio__tags__title">Take a look</h3>
             <section className="portfolio__tags">
               <a
-                href="http://www.google.es"
+                href="https://www.figma.com/file/Awljh0FcUU7SEOve02PSnm/Pokemon-Dex%2B?type=design&node-id=0%3A1&mode=design&t=9bwqPni1FCMb5YXP-1"
                 className="portfolio__tags__button"
               >
                 Design
