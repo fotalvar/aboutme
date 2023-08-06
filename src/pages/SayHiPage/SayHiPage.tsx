@@ -34,7 +34,7 @@ const SayHiPage = (): React.ReactElement => {
       </div>
       <section className="hi__about">
         <h5 className="hi__about__subtitle">
-          Check out my <strong>code</strong> & <strong>design</strong>
+          Check out this website <strong>code</strong> & <strong>design</strong>
         </h5>
         <div className="hi__buttons">
           <a
@@ -45,7 +45,10 @@ const SayHiPage = (): React.ReactElement => {
             <img src="/images/icons/github.svg" alt="github icon" />
             GitHub
           </a>
-          <a className="hi__button hi__about__button">
+          <a
+            className="hi__button hi__about__button"
+            href="https://www.figma.com/file/svQ6d3iwtaYJdv0XQIrvxM/My-Site?type=design&node-id=0%3A1&mode=design&t=GDsaRtk4d6rIfMXj-1"
+          >
             <img src="/images/icons/figma.svg" alt="figma icon" />
             Figma
           </a>

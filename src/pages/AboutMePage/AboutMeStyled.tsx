@@ -96,7 +96,7 @@ const AboutMePageStyled = styled.section`
 
       &__button {
         border-radius: 50px;
-        background: #efefef;
+        background: #fff;
         width: fit-content;
         height: fit-content;
         padding: 10px 20px;
@@ -105,10 +105,11 @@ const AboutMePageStyled = styled.section`
         color: ${(props) => props.theme.colors.lightPink};
         font-family: ${(props) => props.theme.fonts.title};
         border: 1px solid ${(props) => props.theme.colors.lightPink};
+        transition: 0.5s;
 
         &:hover {
           background: ${(props) => props.theme.colors.lightPink};
-          color: #efefef;
+          color: #fff;
           border: 1px solid ${(props) => props.theme.colors.lightPink};
         }
 
@@ -121,15 +122,31 @@ const AboutMePageStyled = styled.section`
 
       &__text {
         border-top: solid 1px ${(props) => props.theme.colors.lightPink};
-        color: #505964;
-        text-align: justify;
-        font-family: ${(props) => props.theme.fonts.primary};
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 50px;
-        max-width: 100%;
-        padding: 30px 0;
+        padding: 30px 0 0 0;
+
+        &__more {
+          margin-bottom: 20px;
+          color: #505964;
+          text-align: justify;
+          font-family: ${(props) => props.theme.fonts.primary};
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 40px;
+          max-width: 100%;
+        }
+
+        &__less {
+          margin-bottom: 20px;
+          color: #505964;
+          text-align: justify;
+          font-family: ${(props) => props.theme.fonts.primary};
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 40px;
+          max-width: 100%;
+        }
       }
     }
 
